@@ -4,7 +4,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string :book_title
       t.integer :isbn_number
       t.integer :book_price
-      t.string :new
+      t.boolean :new
       t.string :description
       t.string :location
 

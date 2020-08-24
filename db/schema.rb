@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_24_134426) do
+ActiveRecord::Schema.define(version: 2020_08_24_154338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,19 +19,20 @@ ActiveRecord::Schema.define(version: 2020_08_24_134426) do
     t.string "book_title"
     t.integer "isbn_number"
     t.integer "book_price"
-    t.string "new"
+    t.boolean "new"
     t.string "description"
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "author"
   end
 
   create_table "reservations", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
-    t.string "approved"
-    t.string "cancelled"
-    t.string "payment"
+    t.boolean "approved"
+    t.boolean "cancelled"
+    t.boolean "payment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
