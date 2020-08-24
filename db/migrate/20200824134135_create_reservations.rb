@@ -3,9 +3,9 @@ class CreateReservations < ActiveRecord::Migration[6.0]
     create_table :reservations do |t|
       t.date :start_date
       t.date :end_date
-      t.string :approved
-      t.string :cancelled
-      t.string :payment
+      t.boolean :approved
+      t.boolean :cancelled
+      t.boolean :payment
 
       t.timestamps
     end
