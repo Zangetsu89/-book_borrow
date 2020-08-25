@@ -8,5 +8,6 @@ class Book < ApplicationRecord
     validates :description, presence: true
     validates :author, presence: true
     validates :location, presence: true
-    validates :new, presence: true
+    validates :condition, presence: true
+
 end
