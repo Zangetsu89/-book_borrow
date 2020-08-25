@@ -1,0 +1,17 @@
+<div class="card mb-3">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"> <%= Book Title %> </h5>
+    <p class="card-text"> <%= author %> </p>
+    <p class="card-text"><small class="text-muted"><%= condition %></small></p>
+    <p class="card-text"> <%= description %> </p>
+  <button type="button" class="btn btn-success">Reserve this book</button>
+  <button type="button" class="btn btn-info">This book is <%= availability %> </button>
+  </div>
+  <div>
+    <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search for a book" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  </div>
+</div>
