@@ -1,1 +1,47 @@
 // Specific CSS for your home-page
+body {
+  background-color: #F8EBD2;
+}
+
+.btn {
+  border-radius: 25px;
+  background-color: #F97068;
+  font-variant: small-caps;
+  font-size: 25px;
+  color: #F8EBD1;
+  width: 268px;
+  height: 99px;
+  left: 31px;
+  top: 457px;
+}
+
+.btn-search {
+  border-radius: 20px;
+  background-color: #F97068;
+  font-variant: small-caps;
+  font-size: 15px;
+  color: #F8EBD1;
+  width: 80px;
+  height: 45px;
+}
+
+.banner {
+  color: #F97068;
+  text-align: center;
+  h1 {
+    font-size: 80px;
+    position: absolute;
+    align-items: center;
+  }
+
+  .img {
+
+  }
+
+  .search {
+    position: absolute;
+    top: 500px;
+    left: 200px;
+    border-radius: 20px;
+  }
+}
