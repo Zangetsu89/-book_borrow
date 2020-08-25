@@ -1,5 +1,17 @@
-<div class="banner" style="background-image: url();">
-  <div class="container">
+<div class="container">
+  <div class="banner">
     <h1>Book Borrow</h1>
+    <%= image_tag "banner.jpg", alt: "A bookseller", class: "img" %>
+     <div class="search">
+        <form class="search-bar form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
   </div>
+  <div>
+    <p>Lorem Ipsum etc.</p>
+  </div>
+  <button type="button" class="btn btn-light">Rent a Book</button>
+  <button type="button" class="btn btn-light">Lend a Book</button>
 </div>
