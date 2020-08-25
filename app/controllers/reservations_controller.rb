@@ -1,4 +1,4 @@
-class booksController < ApplicationController
+class ReservationsController < ApplicationController
 
 def new
   @book = Book.find(params[:book_id])

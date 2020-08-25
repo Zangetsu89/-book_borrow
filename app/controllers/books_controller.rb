@@ -1,4 +1,4 @@
-class booksController < ApplicationController
+class BooksController < ApplicationController
   def home
     @books = Book.all
     5.times do 
