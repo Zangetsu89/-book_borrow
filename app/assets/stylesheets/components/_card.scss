@@ -1,0 +1,35 @@
+.card-img-top {
+  border: 1px solid black;
+  height: 225px;
+  width: 175px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 20px;
+  width: 18rem;
+  height: 25rem;
+  margin: 20px;
+}
+
+.card-body {
+  h5 {
+    align-text: center;
+  }
+  p {
+    align-text: center;
+  }
+}
+
+
+.btn-card {
+  background-color: #F97068;
+  font-variant: small-caps;
+  font-size: 15px;
+  background-color: #BCBCB4;
+  color: #F8EBD2;
+  padding: 8px;
+  border-radius: 15px;
+}
