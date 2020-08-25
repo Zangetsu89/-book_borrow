@@ -4,9 +4,9 @@
     <h5 class="card-title"> <%= Book Title %> </h5>
     <p class="card-text"> <%= author %> </p>
     <p class="card-text"><small class="text-muted"><%= condition %></small></p>
-    <p class="card-text"> DESCRIPTION </p>
+    <p class="card-text"> <%= description %> </p>
   <button type="button" class="btn btn-success">Reserve this book</button>
-  <button type="button" class="btn btn-info">This book is available </button>
+  <button type="button" class="btn btn-info">This book is <%= availability %> </button>
   </div>
   <div>
     <form class="form-inline">
