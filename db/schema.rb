@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2020_08_24_154338) do
     t.string "book_title"
     t.integer "isbn_number"
     t.integer "book_price"
-    t.boolean "new"
+    t.string "new"
     t.string "description"
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
@@ -30,9 +30,9 @@ ActiveRecord::Schema.define(version: 2020_08_24_154338) do
   create_table "reservations", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
-    t.boolean "approved"
-    t.boolean "cancelled"
-    t.boolean "payment"
+    t.string "approved"
+    t.string "cancelled"
+    t.string "payment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

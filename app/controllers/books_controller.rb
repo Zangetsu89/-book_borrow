@@ -1,7 +1,7 @@
 class booksController < ApplicationController
   def home
     @books = Book.all
-    5.times do 
+    5.times do
       @books.sample
     end
   end
