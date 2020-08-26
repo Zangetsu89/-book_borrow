@@ -3,20 +3,22 @@
 
 
 .container.index {
-display: flex;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr ;
+}
+
+.index-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  grid-column: span 3;
 }
 
 .left-side-comp {
   flex-direction: column;
   margin-top: 20px;
-}
 
-.index-grid {
-  display: grid;
-  flex-wrap: wrap;
-  columns: 1fr, 1fr, 1fr;
 }
-
 .filter-by {
   border: 1px solid black;
   width: 195px;
