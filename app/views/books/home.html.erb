@@ -12,6 +12,7 @@
   </div>
   <div class="home-buttons">
     <button type="button" class="btn-home btn-light">Rent a Book</button>
+    <%= link_to "Rent a Book", books_path, class:"btn-home btn-light" %>
     <button type="button" class="btn-home btn-light">Lend a Book</button>
   </div>
 
@@ -20,7 +21,7 @@
   <div class="index-grid">
     <% @three_books.each do |book| %>
     <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
+      <%= cl_image_tag book.photo.key, height: 150, width: 75, crop: :fill %>
       <div class="card-body">
         <h5 class="card-title"> <%= book.book_title %> </h5>
         <p class="card-text"> <%= book.author %></p>
