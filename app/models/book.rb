@@ -9,5 +9,6 @@ class Book < ApplicationRecord
     validates :author, presence: true
     validates :location, presence: true
     validates :condition, presence: true
+    has_one_attached :photo
 
 end
