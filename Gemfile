@@ -34,6 +34,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'cloudinary'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'geocoder'
 
 group :development, :test do
   gem 'pry-byebug'

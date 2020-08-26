@@ -2,6 +2,7 @@ require "faker"
 
 User.destroy_all
 Book.destroy_all
+ADRESSES = ["baars 14 1511LD Oostzaan", "spiegelgracht 10, Amsterdam"]
 
 puts 'Creating 5 fake users...'
 User.create(first_name: "david", last_name: "l", email: "a@a.com", password: 123456)
@@ -18,16 +19,16 @@ User.create(first_name: "david", last_name: "l", email: "a@a.com", password: 123
   puts
   puts 'Creating 5 fake books...'
 
-5.times do
-  book = Book.new(
-    book_title:  Faker::Superhero.name,
-    isbn_number: Faker::Number.number(digits: 5),
-    book_price:  Faker::Number.number(digits: 1),
-    condition:   ["new", "used"].sample,
-    description: Faker::ChuckNorris.fact,
-    location:    Faker::Address.city,
-    author:      Faker::Name.name,
-  )
+  5.times do
+    book = Book.new(
+      book_title:  Faker::Superhero.name,
+      isbn_number: Faker::Number.number(digits: 5),
+      book_price:  Faker::Number.number(digits: 1),
+      condition:   ["new", "used"].sample,
+      description: Faker::ChuckNorris.fact,
+      location:    ADRESSES.sample,
+      author:      Faker::Name.name,
+    )
 
   book.user = user
 
