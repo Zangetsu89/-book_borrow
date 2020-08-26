@@ -1,9 +1,7 @@
 class BooksController < ApplicationController
   def home
     @books = Book.all
-    5.times do
-      @books.sample
-    end
+    @three_books = @books.sample(3)
   end
 
   def index
