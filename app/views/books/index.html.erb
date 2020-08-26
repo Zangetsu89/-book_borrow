@@ -17,8 +17,8 @@
     <% @books.each do |book| %>
       <div class="card">
         <%= link_to book_path(book) do %>
-           <%= image_tag("book.jpeg", size:"50x70") %>
-              <% end %>
+          <%= cl_image_tag book.photo.key, height: 150, width: 75, crop: :fill %>
+        <% end %>
 
         <div class="card-body">
           <h5 class="card-title"> <%= book.book_title %> </h5>
