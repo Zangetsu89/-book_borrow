@@ -7,38 +7,23 @@
         <button class="btn my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
-
-<<<<<<< HEAD
-  <% @books.each do |book| %>
-  <div class="card">
-  <%= link_to "Learn more", book_path(book)  %>
-
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-           <h5 class="card-title"> <%= book.book_title %> </h5>
-      <p class="card-text"> written by xyz, year</p>
-   <!--    if -->
-      <span class="badge">availabile now</span>
-     <!--  else -->
-     <!--  <a href="#" class="btn-card"> not availabile</a> -->
-  <!--     end -->
-=======
-    <div class="filter-by">
-      <p>Filter by:</p>
-    </div>
-  </div>
->>>>>>> master
+     <div class="filter-by">
+       <p>Filter by:</p>
+     </div>
+   </div>
+    
 
   <div class="index-grid">
     <% @books.each do |book| %>
-    <div class="card">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"> <%= book.book_title %> </h5>
-        <p class="card-text"> <%= book.author %></p>
-        <span class="badge">availabile now</span>
+      <%= link_to "Learn more", book_path(book)  %>
+      <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"> <%= book.book_title %> </h5>
+          <p class="card-text"> <%= book.author %></p>
+          <span class="badge">availabile now</span>
+        </div>
       </div>
-    </div>
       <% end %>
   </div>
 
