@@ -1,18 +1,18 @@
-<div class="container">
-  <div class="banner">
-    <h1>Book Borrow</h1>
-    <%= image_tag "banner.jpg", alt: "A bookseller", class: "img" %>
-     <div class="search">
-        <form class="search-bar form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-  </div>
-  <div>
-  
-    <p>Lorem Ipsum etc.</p>
-  </div>
-  <button type="button" class="btn-home btn-light">Rent a Book</button>
-  <button type="button" class="btn-home btn-light">Lend a Book</button>
+<div class="homepage">
+    <div class="banner">
+      <%= image_tag "banner.jpg", alt: "A bookseller", class: "img-banner" %>
+          <form class="search-bar d-flex">
+            <input class="form-control search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
+          </form>
+    </div>
+    <div class="homepage-name"><h1><span class="book-title">Book</span><span class="borrow-title">Borrow</span></h1></div>
+    <div class="paragraph">
+      <p>For book lovers, lenders, and friendly neighbors. Lend your books out or search for your favorite books in your neighborhood.</p>
+    </div>
+    <div class="home-buttons">
+    <button type="button" class="btn-home btn-light">Rent a Book</button>
+    <button type="button" class="btn-home btn-light">Lend a Book</button>
+    </div>
 </div>
+
