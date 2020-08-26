@@ -9,9 +9,11 @@
 
   <% @books.each do |book| %>
   <div class="card">
+  <%= link_to "Learn more", book_path(book)  %>
+
     <img class="card-img-top" src="..." alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title"> <%= book.book_title %> </h5>
+           <h5 class="card-title"> <%= book.book_title %> </h5>
       <p class="card-text"> written by xyz, year</p>
    <!--    if -->
       <span class="badge">availabile now</span>
