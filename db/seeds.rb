@@ -4,6 +4,12 @@ User.destroy_all
 Book.destroy_all
 
 puts 'Creating 5 fake users...'
+  User.create(
+    first_name: "Essam",
+    last_name: "Dawood",
+    email: "essam_d@hotmail.com",
+    password: 123456789
+  )
 5.times do
   user = User.new(
     first_name: Faker::Name.name,
