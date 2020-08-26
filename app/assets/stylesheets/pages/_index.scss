@@ -1,6 +1,27 @@
 // Import page-specific CSS files here.
 @import "home";
 
+
 .container.index {
-  display: flex;
+display: flex;
 }
+
+.left-side-comp {
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.index-grid {
+  display: grid;
+  flex-wrap: wrap;
+  columns: 1fr, 1fr, 1fr;
+}
+
+.filter-by {
+  border: 1px solid black;
+  width: 195px;
+  height: 300px;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
