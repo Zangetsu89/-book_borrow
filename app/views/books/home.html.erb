@@ -1,4 +1,5 @@
 <div class="homepage">
+
   <div class="banner">
     <%= image_tag "banner.jpg", alt: "A bookseller", class: "img-banner" %>
     <%= simple_form_for :search, url: books_path, :method => :get, :class => "search-bar d-flex" do |f| %>
@@ -6,16 +7,20 @@
       <%= f.submit :class => "btn btn-search my-2 my-sm-0" %>
       <% end %>
   </div>
+
   <div class="homepage-name"><h1><span class="book-title">Book</span><span class="borrow-title">Borrow</span></h1></div>
+
   <div class="paragraph">
     <p>For book lovers, lenders, and friendly neighbors. Lend your books out or search for your favorite books in your neighborhood.</p>
   </div>
+
   <div class="home-buttons">
     <%= link_to "Rent a Book", books_path, class:"btn-home btn-light" %>    
     <%= link_to "Lend a Book", new_book_path, class:"btn-home btn-light" %>
   </div>
 
 </div>
+
   <div class="index-grid">
     <% @three_books.each do |book| %>
     <%= render "indexcard", book: book %>
