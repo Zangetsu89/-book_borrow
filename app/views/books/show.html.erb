@@ -1,17 +1,29 @@
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
+<div class="container">
+<div class="row text-center d-flex  justify-content-around">
+<div class="card show">
+
+  <%#= image_tag("book.jpeg", size:"600x300") %>
+  <%= cl_image_tag @book.photo.key, height: 150, width: 75, crop: :fill %>
   <div class="card-body">
-    <h5 class="card-title"> <%= Book Title %> </h5>
-    <p class="card-text"> <%= author %> </p>
-    <p class="card-text"><small class="text-muted"> CONDITION  </small></p>
-    <p class="card-text"> DESCRIPTION </p>
-  <button type="button" class="btn btn-success">Reserve this book</button>
-  <button type="button" class="btn btn-info">This book is available </button>
+    <h5 class="card-title"> <%= @book.book_title %> </h5>
+    <p class="card-text"> <%= @book.author %> </p>
+    <p class="card-text"><small class="text-muted"> <%= @book.condition %>  </small></p>
+    <p class="card-text"> <%= @book.description %> </p>
+    <button type="button" class="btn btn-success">Reserve this @book</button>
+    <button type="button" class="btn btn-info">This book is available </button>
+    </div>
   </div>
-  <div>
+</div>
+
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+     <div>
     <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search for a book" aria-label="Search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-  </div>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search for another book</button>
+    </form>
+    </div>
 </div>
