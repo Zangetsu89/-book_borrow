@@ -1,1 +1,10 @@
 <p>card</p>
+<%# if @reservation.approved == true %>
+<div class="form-check">
+  <input class="form-check-input position-static" type="radio" name="Approve" id="blankRadio1" value="option1" aria-label="...">
+</div>
+<%# elsif @reservation.approved == false %>
+<div class="form-check">
+  <input class="form-check-input position-static" type="radio" name="Cancel" id="blankRadio1" value="option2" aria-label="...">
+</div>
+<%# end %>

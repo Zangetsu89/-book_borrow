@@ -47,3 +47,6 @@ import { initMapbox } from '../plugins/init_mapbox';
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
+
+//approve
+import { initApprove } from '..plugins/init_approveclick';
