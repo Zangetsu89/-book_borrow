@@ -18,29 +18,13 @@ User.create(first_name: "david", last_name: "l", email: "a@a.com", password: 123
   user.save!
   puts "Created #{user.first_name}, #{user.last_name}, #{user.email}, #{user.password}"
   puts
-  # puts 'Creating 5 fake books...'
 
-  # 5.times do
-  #   book = Book.new(
-  #     book_title:  Faker::Superhero.name,
-  #     isbn_number: Faker::Number.number(digits: 5),
-  #     book_price:  Faker::Number.number(digits: 1),
-  #     condition:   ["new", "used"].sample,
-  #     description: Faker::ChuckNorris.fact,
-  #     location:    ADRESSES.sample,
-  #     author:      Faker::Name.name,
-  #     photo:       cl_image_tag("")
-  #   )
-
-  # book.user = user
-
-  # book.save!
-  # puts "Created #{book.book_title}, #{book.isbn_number}, #{book.book_price}, #{book.condition}, #{book.description}, #{book.location}, #{book.author}, #{book.photo}"
   file1 = URI.open('https://res.cloudinary.com/df2nlavdo/image/upload/v1598447202/image_tbowfr.png')
   file2 = URI.open('https://res.cloudinary.com/df2nlavdo/image/upload/v1598447200/image_4_rg0pyh.png')
   file3 = URI.open('https://res.cloudinary.com/df2nlavdo/image/upload/v1598447200/image_1_xn1jnh.png')
   file4 = URI.open('https://res.cloudinary.com/df2nlavdo/image/upload/v1598447200/image_2_fxvag9.png')
   file5 = URI.open('https://res.cloudinary.com/df2nlavdo/image/upload/v1598447201/image_3_dsum4k.png')
+
   book1 = Book.new(
     book_title: "Don Quixote", user: user, isbn_number: 31698, book_price: 2, condition: "as new", description: "Don Quixote kicks ass", location: ADRESSES.sample, author: "Miguel Cervantes", photo: "https://res.cloudinary.com/df2nlavdo/image/upload/v1598447202/image_tbowfr.png")
   book2 = Book.new(

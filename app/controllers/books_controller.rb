@@ -5,8 +5,11 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
-
+    if params[:search]
+     @books = Book.search_by_book_title_and_author(params[:search][:query])
+    else
+     @books = Book.all
+    end
   end
 
   def show

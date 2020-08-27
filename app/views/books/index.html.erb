@@ -2,10 +2,10 @@
 
   <div class="left-side-comp">
     <div class="index-search">
-      <form class="d-flex my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      <%= simple_form_for :search, url: books_path, :method => :get, :class => "search-bar d-flex" do |f| %>
+      <%= f.text_field  :query, :class => "form-control search mr-sm-2" %>
+      <%= f.submit :class => "btn btn-search my-2 my-sm-0" %>
+      <% end %>
     </div>
      <div class="filter-by">
        <p>Filter by:</p>
