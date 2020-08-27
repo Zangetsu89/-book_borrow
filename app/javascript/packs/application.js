@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("jquery")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -15,7 +16,11 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
+   $("input.datepicker").each(function(input) {
+     $(this).datepicker({
+     dateFormat: "yy-mm-dd",
+     altField: $(this).next()
+      })
 
 // ----------------------------------------------------
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
@@ -24,6 +29,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import { alert } from '../components/alert';
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -31,6 +38,7 @@ import "bootstrap";
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  // alert()
 });
 
 // mapbox
