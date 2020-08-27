@@ -1,10 +1,10 @@
 <div class="homepage">
   <div class="banner">
     <%= image_tag "banner.jpg", alt: "A bookseller", class: "img-banner" %>
-    <form class="search-bar d-flex">
-      <input class="form-control search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <%= simple_form_for :search, url: books_path, :method => :get, :class => "search-bar d-flex" do |f| %>
+      <%= f.text_field  :query, :class => "form-control search mr-sm-2" %>
+      <%= f.submit :class => "btn btn-search my-2 my-sm-0" %>
+      <% end %>
   </div>
   <div class="homepage-name"><h1><span class="book-title">Book</span><span class="borrow-title">Borrow</span></h1></div>
   <div class="paragraph">
