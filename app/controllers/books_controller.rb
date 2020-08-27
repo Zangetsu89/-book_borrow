@@ -1,9 +1,7 @@
 class BooksController < ApplicationController
   def home
     @books = Book.all
-    5.times do
-      @books.sample
-    end
+    @three_books = @books.sample(3)
   end
 
   def index
@@ -15,13 +13,13 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @books = Book.geocoded # returns books with coordinates
 
-    @markers = @books.map do |book|
-      {
-        lat: book.latitude,
-        lng: book.longitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { book: book }),
-      }
-    end
+    # @markers = @books.map do |book|
+    #   {
+    #     lat: book.latitude,
+    #     lng: book.longitude,
+    #     infoWindow: render_to_string(partial: "infowindow", locals: { book: book }),
+    #   }
+    # end
   end
 
   def new

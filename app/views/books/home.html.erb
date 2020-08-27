@@ -1,18 +1,32 @@
 <div class="homepage">
-    <div class="banner">
-      <%= image_tag "banner.jpg", alt: "A bookseller", class: "img-banner" %>
-          <form class="search-bar d-flex">
-            <input class="form-control search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
-          </form>
-    </div>
-    <div class="homepage-name"><h1><span class="book-title">Book</span><span class="borrow-title">Borrow</span></h1></div>
-    <div class="paragraph">
-      <p>For book lovers, lenders, and friendly neighbors. Lend your books out or search for your favorite books in your neighborhood.</p>
-    </div>
-    <div class="home-buttons">
+  <div class="banner">
+    <%= image_tag "banner.jpg", alt: "A bookseller", class: "img-banner" %>
+    <form class="search-bar d-flex">
+      <input class="form-control search mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  <div class="homepage-name"><h1><span class="book-title">Book</span><span class="borrow-title">Borrow</span></h1></div>
+  <div class="paragraph">
+    <p>For book lovers, lenders, and friendly neighbors. Lend your books out or search for your favorite books in your neighborhood.</p>
+  </div>
+  <div class="home-buttons">
     <button type="button" class="btn-home btn-light">Rent a Book</button>
+    <%= link_to "Rent a Book", books_path, class:"btn-home btn-light" %>
     <button type="button" class="btn-home btn-light">Lend a Book</button>
-    </div>
-</div>
+  </div>
 
+
+</div>
+  <div class="index-grid">
+    <% @three_books.each do |book| %>
+    <div class="card">
+      <%= cl_image_tag book.photo.key, height: 150, width: 75, crop: :fill %>
+      <div class="card-body">
+        <h5 class="card-title"> <%= book.book_title %> </h5>
+        <p class="card-text"> <%= book.author %></p>
+        <span class="badge">availabile now</span>
+      </div>
+    </div>
+    <% end %>
+  </div>
