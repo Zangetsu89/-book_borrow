@@ -16,12 +16,7 @@ require("jquery")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-   $("input.datepicker").each(function(input) {
-     $(this).datepicker({
-     dateFormat: "yy-mm-dd",
-     altField: $(this).next()
-      })
-
+  
 // ----------------------------------------------------
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
@@ -30,19 +25,12 @@ require("jquery")
 // External imports
 import "bootstrap";
 import { alert } from '../components/alert';
+// mapbox
+import { initMapbox } from '../plugins/init_mapbox';
 
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-
-document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-  // alert()
-});
-
-// mapbox
-import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   initMapbox();
