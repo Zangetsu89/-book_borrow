@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 2020_08_27_102620) do
     t.string "author"
     t.bigint "user_id"
     t.string "condition"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 
