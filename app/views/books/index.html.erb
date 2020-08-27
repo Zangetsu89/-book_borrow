@@ -11,21 +11,11 @@
        <p>Filter by:</p>
      </div>
    </div>
-    
+
 
   <div class="index-grid">
     <% @books.each do |book| %>
-      <div class="card">
-        <%= link_to book_path(book) do %>
-          <%= cl_image_tag book.photo.key, height: 150, width: 75, crop: :fill %>
-        <% end %>
-
-        <div class="card-body">
-          <h5 class="card-title"> <%= book.book_title %> </h5>
-          <p class="card-text"> <%= book.author %></p>
-          <span class="badge">availabile now</span>
-        </div>
-      </div>
+    <%= render "indexcard", book: book %>
       <% end %>
   </div>
 
