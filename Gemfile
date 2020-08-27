@@ -32,10 +32,13 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
+
+# gems we added
 gem 'cloudinary'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'geocoder'
 gem 'faker'
+gem 'pg_search'
 
 group :development, :test do
   gem 'pry-byebug'

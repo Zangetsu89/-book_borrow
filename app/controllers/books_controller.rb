@@ -11,15 +11,11 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
-    @books = Book.geocoded # returns books with coordinates
-
-    @markers = @books.map do |book|
-      {
-        lat: book.latitude,
-        lng: book.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { book: book }),
-      }
-    end
+    @marker =  [{
+        lat: @book.latitude,
+        lng: @book.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { book: @book }),
+      }]
   end
 
   def new
