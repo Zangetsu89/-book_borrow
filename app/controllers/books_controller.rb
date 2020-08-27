@@ -17,7 +17,7 @@ class BooksController < ApplicationController
       {
         lat: book.latitude,
         lng: book.longitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { book: book }),
+        infoWindow: render_to_string(partial: "info_window", locals: { book: book }),
       }
     end
   end
