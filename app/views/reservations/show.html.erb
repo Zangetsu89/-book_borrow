@@ -1,1 +1,43 @@
-<p>card</p>
+<!-- <p>card</p>
+<%# if @reservation.approved == true %>
+<div class="form-check">
+  <input class="form-check-input position-static" type="radio" name="Approve" id="blankRadio1" value="option1" aria-label="...">
+</div>
+<%# elsif @reservation.approved == false %>
+<div class="form-check">
+  <input class="form-check-input position-static" type="radio" name="Cancel" id="blankRadio1" value="option2" aria-label="...">
+</div>
+<%# end %>
+-->
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h1>
+        <%= @reservation.status %>
+      </h1>
+      <p>
+        <%= @reservation.start_date %>
+      </p>
+      <p>
+        <%= @reservation.end_date %>
+      </p>
+
+      <p>
+        <%= @reservation.book.book_title %>
+      </p>
+      <p>
+        <%= @reservation.book.author %>
+      </p>
+      <% unless @reservation.status == "Accepted" || @reservation.status == "Declined" %>
+        <%= button_to "Accept", accept_book_reservation_path(@reservation.book, @reservation), method: :put %>
+        <%= button_to "Decline", decline_book_reservation_path(@reservation.book, @reservation), method: :put %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
