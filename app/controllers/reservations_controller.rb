@@ -6,14 +6,15 @@ def new
 end
 
 def create
-  # @reservation = Reservation.new(reservation_strong_params)
-  # @book = Book.find(params[:book_id])
-  # @reservation.book = @book
-  # if @reservation.save
-  #   redirect_to @book_path(@book)
-  # else
-  #   render :new
-  # end
+  @reservation = Reservation.new(reservation_strong_params)
+  @book = Book.find(params[:book_id])
+  @reservation.book = @book
+      raise
+  if @reservation.save
+    redirect_to book_path(@book)
+  else
+    render :new
+  end
 end
 
 def show
@@ -22,17 +23,17 @@ def show
 end
 
 def declined
- 
+
 end
 
 def approved
- 
+
 end
 
 private
 
 def reservation_strong_params
-  # params.require(:reviews).permit(:start_date, :end_date, :approved, :cancelled)
+  params.require(:reservation).permit(:start_date, :end_date, :approved, :cancelled, :book_id)
 end
 
 end
