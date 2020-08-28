@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h1>
+        <%= @reservation.status %>
+      </h1>
+      <p>
+        <%= @reservation.start_date %>
+      </p>
+      <p>
+        <%= @reservation.end_date %>
+      </p>
+
+      <p>
+        <%= @reservation.book.book_title %>
+      </p>
+      <p>
+        <%= @reservation.book.author %>
+      </p>
+      <% unless @reservation.status == "Accepted" || @reservation.status == "Declined" %>
+        <%= button_to "Accept", accept_book_reservation_path(@reservation.book, @reservation), method: :put %>
+        <%= button_to "Decline", decline_book_reservation_path(@reservation.book, @reservation), method: :put %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

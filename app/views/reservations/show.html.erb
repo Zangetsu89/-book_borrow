@@ -32,11 +32,6 @@
       <p>
         <%= @reservation.book.author %>
       </p>
-      <% unless @reservation.status == "Accepted" || @reservation.status == "Declined" %>
-        <%= button_to "Accept", accept_book_reservation_path(@reservation.book, @reservation), method: :put %>
-        <%= button_to "Decline", decline_book_reservation_path(@reservation.book, @reservation), method: :put %>
-      <% end %>
-
     </div>
   </div>
 </div>

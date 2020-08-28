@@ -39,6 +39,8 @@ end
 
 def bookings
   
+  # @book = Book.find(params[:book_id])
+  # @reservation = Reservation.find(params[:id])
 end
 
 private
