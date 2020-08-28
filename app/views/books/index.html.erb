@@ -1,20 +1,19 @@
 <div class="container index">
 
-  <div class="left-side-comp">
     <div class="index-search">
       <%= form_tag books_path, :class => "search-bar d-flex", method: :get do %>
       <%= text_field_tag :query, params[:query], class: "form-control search mr-sm-2", placeholder: "Find a book by title or author" %>
       <%= submit_tag "Search", class: "btn btn-search my-2 my-sm-0" %>
-    <% end %>
+      <% end %>
     </div>
-   </div>
 
-
-  <div class="index-grid">
-    <% @books.each do |book| %>
-      <div class="card">
-        <%= render "indexcard", book: book %>
+  <div class="container-books">
+      <% @books.each do |book| %>
+        <div class="index-grid">
+            <div class="card">
+              <%= render "indexcard", book: book %>
+            </div>
+        </div>
       <% end %>
   </div>
-
 </div>

@@ -37,6 +37,17 @@ def decline
   redirect_to book_reservation_path(@reservation.book, @reservation)
 end
 
+def bookings
+  
+  # @book = Book.find(params[:book_id])
+  # @reservation = Reservation.find(params[:id])
+end
+
+# def available?
+#   status !== "accepted"
+#   # return true
+# end
+
 private
 
 def reservation_strong_params
