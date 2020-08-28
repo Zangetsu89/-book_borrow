@@ -1,6 +1,15 @@
-<p>card</p>
-<%= simple_form_for [@book, @reservation] do |f| %>
-<%= f.input :start_date %>
-<%= f.input :end_date %>
-<%= f.button :submit, class: "btn-primary" %>
-<% end %>
+<div class="container-form">
+  <div class="row" id="reservation-new">
+    <div class="rform col-6-offset-3">
+  <h2 class="choose">Choose dates to reserve your Book</h2>
+      <div class="opacitylevel">
+        <%= simple_form_for [@book, @reservation] do |f| %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.button :submit, class: "btn-primary-reserve" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
