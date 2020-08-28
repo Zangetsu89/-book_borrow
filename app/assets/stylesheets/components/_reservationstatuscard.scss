@@ -19,6 +19,9 @@
   border: 1px solid rgb(228, 216, 178);
   padding: 10px;
   border-radius: 20px;
+  &.pending {
+    width: auto;
+  }
 }
 
 
