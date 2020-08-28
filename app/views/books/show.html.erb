@@ -1,9 +1,11 @@
 <div class="container mt-4">
   <div class="row text-center d-flex  justify-content-around">
-   
+
     <div class="col-6">
       <div class="card show">
+        <% if @book.photo.attached? %>
         <%= cl_image_tag @book.photo.key, height: 150, width: 75, crop: :fill %>
+        <% end %>
         <div class="card-body">
           <h5 class="card-title"> <%= @book.book_title %> </h5>
           <p class="card-text"> <%= @book.author %> </p>
