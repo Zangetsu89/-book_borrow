@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     end
   end
  get '/bookings' => 'reservations#bookings', as: "bookings"
+ get '/incoming_bookings' => 'reservations#incoming_bookings', as: "incoming_bookings"
 end
 
 
