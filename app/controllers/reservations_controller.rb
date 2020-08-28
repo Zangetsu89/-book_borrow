@@ -37,6 +37,10 @@ def decline
   redirect_to book_reservation_path(@reservation.book, @reservation)
 end
 
+def bookings
+  
+end
+
 private
 
 def reservation_strong_params
