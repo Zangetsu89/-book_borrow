@@ -9,18 +9,18 @@ User.destroy_all
 ADRESSES = ["baars 14 1511LD Oostzaan", "spiegelgracht 10, Amsterdam"]
 
 puts 'Creating 5 fake users...'
-User.create(first_name: "david", last_name: "l", email: "a@a.com", password: 123456)
+user = User.create(first_name: "david", last_name: "l", email: "a@a.com", password: 123456)
 5.times do
-  user = User.new(
-    first_name: Faker::Name.name,
-    last_name:  Faker::Name.name,
-    email:      Faker::Internet.email,
-    password:   Faker::Number.number(digits: 6)
-  )
+  # user = User.new(
+  #   first_name: Faker::Name.name,
+  #   last_name:  Faker::Name.name,
+  #   email:      Faker::Internet.email,
+  #   password:   Faker::Number.number(digits: 6)
+  # )
 
-  user.save!
-  puts "Created #{user.first_name}, #{user.last_name}, #{user.email}, #{user.password}"
-  puts
+  # user.save!
+  # puts "Created #{user.first_name}, #{user.last_name}, #{user.email}, #{user.password}"
+  # puts
 
   file1 = URI.open('https://res.cloudinary.com/df2nlavdo/image/upload/v1598447202/image_tbowfr.png')
   file2 = URI.open('https://res.cloudinary.com/df2nlavdo/image/upload/v1598447200/image_4_rg0pyh.png')
