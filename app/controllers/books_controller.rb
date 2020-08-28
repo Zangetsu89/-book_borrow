@@ -53,6 +53,6 @@ class BooksController < ApplicationController
   private
 
   def strong_books_params
-    params.require(:book).permit(:book_title, :isbn_number, :book_price, :location, :author, :condition, :description)
+    params.require(:book).permit(:book_title, :isbn_number, :book_price, :location, :author, :condition, :description, :photo)
   end
 end
