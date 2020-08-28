@@ -6,10 +6,17 @@
       <div class="card-body">
         <h5 class="card-title"> <%= @book.book_title %> </h5>
         <p class="card-text"> <%= @book.author %> </p>
-        <p class="card-text"><small class="text-muted"> <%= @book.condition %>  </small></p>
         <p class="card-text"> <%= @book.description %> </p>
+        <p class="card-text"><small class="text-muted"> "Condition: " <%= @book.condition %>  </small></p>
+
         <%= link_to "Reserve this book", new_book_reservation_path(@book), class:"btn btn-success" %>
-        <button type="button" class="btn btn-info">This book is available </button>
+
+        <% if @book.available %>
+          <span class="badge badge-success">Available</span>
+        <% else %>
+          <span class="badge badge-warning">Unavailable</span>
+        <% end %>
+     
       </div>
     </div>
     <div id="map"
