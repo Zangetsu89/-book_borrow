@@ -5,8 +5,8 @@ class BooksController < ApplicationController
   end
 
   def index
-    if !params[:search][:query].empty?
-     @books = Book.search_by_book_title_and_author(params[:search][:query])
+    if params[:query].present?
+     @books = Book.search_by_book_title_and_author(params[:query])
     else
      @books = Book.all
     end
