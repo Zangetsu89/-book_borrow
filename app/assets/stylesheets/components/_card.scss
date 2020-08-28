@@ -9,12 +9,24 @@
 .card {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 5px;
+  border-radius: 20px;
   width: 16rem;
   height: 25rem;
   margin: 20px 0;
-  background-color: transparent;
+  background-color:rgba(0, 0, 255, 0);
   border: transparent;
+}
+
+.card.show {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 20px;
+  width: 80%;
+  height: 600px;
+  margin: 20px 0;
+  background-color: rgba(0, 0, 255, 0);
 }
 
 .card-body {
@@ -30,7 +42,6 @@
 .badge {
   font-variant: small-caps;
     font-size: 15px;
-    background-color: white;
     color: #F97068;
     padding: 8px;
     border-radius: 15px;
