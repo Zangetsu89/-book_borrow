@@ -9,7 +9,7 @@ def create
   @reservation = Reservation.new(reservation_strong_params)
   @book = Book.find(params[:book_id])
   @reservation.book = @book
-  @reservation.user = current_user
+  @reservation.user_id = current_user.id
   if @reservation.save
     redirect_to book_reservation_path(@book, @reservation)
     flash.notice = "Your reservation has been sent to the host."
