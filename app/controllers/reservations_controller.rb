@@ -9,6 +9,7 @@ def create
   @reservation = Reservation.new(reservation_strong_params)
   @book = Book.find(params[:book_id])
   @reservation.book = @book
+  @reservation.user = current_user
   if @reservation.save
     redirect_to book_reservation_path(@book, @reservation)
     flash.notice = "Your reservation has been sent to the host."
@@ -38,9 +39,12 @@ def decline
 end
 
 def bookings
-  
-  # @book = Book.find(params[:book_id])
-  # @reservation = Reservation.find(params[:id])
+  @reservations = current_user.reservations
+end
+
+def incoming_bookings
+  @reservations = current_user.incoming_reservations
+  render :bookings
 end
 
 # def available?

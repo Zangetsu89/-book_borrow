@@ -26,6 +26,8 @@
       <p class="status">
         <strong><%= @reservation.status %></strong>
       </p>
+
+      <%= link_to "Go to Dashboard", bookings_path(@reservation), class: "btn-reserve" %>
     </div>
   </div>
 </div>
