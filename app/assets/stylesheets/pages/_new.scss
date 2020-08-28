@@ -1,0 +1,20 @@
+.choose {
+ text-shadow: 2px 2px #F8EBD2;
+}
+#reservation-new {
+  background-image: url("background.jpg");
+  background-size: 720px 400px;
+  object-fit: cover;
+  justify-content: center;
+  margin: 30px;
+  padding: 20px;
+  width: 600px;
+  border-radius: 15px;
+  margin: 75px auto;
+  text-align: center;
+}
+
+.btn-primary-reserve {
+  width: 200px;
+  justify-content: center;
+}
