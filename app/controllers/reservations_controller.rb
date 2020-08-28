@@ -43,6 +43,11 @@ def bookings
   # @reservation = Reservation.find(params[:id])
 end
 
+# def available?
+#   status !== "accepted"
+#   # return true
+# end
+
 private
 
 def reservation_strong_params
