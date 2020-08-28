@@ -2,10 +2,10 @@
 
   <div class="banner">
     <%= image_tag "banner.jpg", alt: "A bookseller", class: "img-banner" %>
-    <%= simple_form_for :search, url: books_path, :method => :get, :class => "search-bar d-flex" do |f| %>
-      <%= f.text_field  :query, :class => "form-control search mr-sm-2" %>
-      <%= f.submit :class => "btn btn-search my-2 my-sm-0" %>
-      <% end %>
+    <%= form_tag books_path, :class => "search-bar d-flex", method: :get do %>
+      <%= text_field_tag :query, params[:query], class: "form-control search mr-sm-2", placeholder: "Find a book by title or author" %>
+      <%= submit_tag "Search", class: "btn btn-search my-2 my-sm-0" %>
+    <% end %>
   </div>
 
   <div class="homepage-name"><h1><span class="book-title">Book</span><span class="borrow-title">Borrow</span></h1></div>
