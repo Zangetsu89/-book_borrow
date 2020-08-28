@@ -1,8 +1,11 @@
 require "faker"
 require "open-uri"
 
-User.destroy_all
+puts "Start time is #{Time.now}"
+puts "--------------------------"
 Book.destroy_all
+User.destroy_all
+
 ADRESSES = ["baars 14 1511LD Oostzaan", "spiegelgracht 10, Amsterdam"]
 
 puts 'Creating 5 fake users...'
@@ -52,5 +55,9 @@ User.create(first_name: "david", last_name: "l", email: "a@a.com", password: 123
 end
 
 puts "#{Book.count} books created"
+puts "#{User.count} users created"
+puts "--------------------------"
+puts "End time is #{Time.now}"
+puts "--------------------------"
 puts 'Finished!'
 
