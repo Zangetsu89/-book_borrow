@@ -1,35 +1,33 @@
-<div class="container">
+<div class="container mt-4">
   <div class="row text-center d-flex  justify-content-around">
-    <div class="card show">
 
-      <%= cl_image_tag @book.photo.key, height: 150, width: 75, crop: :fill %>
-      <div class="card-body">
-        <h5 class="card-title"> <%= @book.book_title %> </h5>
-        <p class="card-text"> <%= @book.author %> </p>
-        <p class="card-text"> <%= @book.description %> </p>
-        <p class="card-text"><small class="text-muted"> "Condition: " <%= @book.condition %>  </small></p>
-
-        <%= link_to "Reserve this book", new_book_reservation_path(@book), class:"btn btn-success" %>
-
-        <% if @book.available %>
-          <span class="badge badge-success">Available</span>
-        <% else %>
-          <span class="badge badge-warning">Unavailable</span>
+    <div class="col-6">
+      <div class="card show">
+        <% if @book.photo.attached? %>
+        <%= cl_image_tag @book.photo.key, height: 150, width: 75, crop: :fill %>
         <% end %>
-     
+        <div class="card-body">
+          <h5 class="card-title"> <%= @book.book_title %> </h5>
+          <p class="card-text"> <%= @book.author %> </p>
+          <p class="card-text"><small class="text-muted"> <%= @book.condition %>  </small></p>
+          <p class="card-text"> <%= @book.description %> </p>
+          <%= link_to "Reserve", new_book_reservation_path(@book), class:"btn btn-success show" %>
+          <button type="button" class="btn btn-info show">Available </button>
+        </div>
       </div>
+  </div>
+<div class="col-6">
+    <div id="map" style="width: 500px; height: 600px;" data-markers="<%= @marker.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      <div class="text-center d-flex  justify-content-around">
+        <div>
+          <%= form_tag books_path, :class => "search-bar d-flex", method: :get do %>
+            <%= text_field_tag :query, params[:query], class: "form-control search mr-sm-2", placeholder: "Find a book by title and author" %>
+            <%= submit_tag "Search", class: "btn btn-search my-2 my-sm-0" %>
+          <% end %>
+        </div>
     </div>
-    <div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @marker.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+</div>
 
-    <div>
-      <%= form_tag books_path, :class => "search-bar d-flex", method: :get do %>
-      <%= text_field_tag :query, params[:query], class: "form-control search mr-sm-2", placeholder: "Find a book by title and author" %>
-      <%= submit_tag "Search", class: "btn btn-search my-2 my-sm-0" %>
-    <% end %>
-    </div>
 
   </div>
 </div>
